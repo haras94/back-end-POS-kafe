@@ -45,11 +45,11 @@ module.exports = {
       .catch(err => console.log(err));
   },
   insertMenu: (req, res)=>{
-    const {title, description,image, status, id_category} = req.body;
+    const {title, image, price, status, id_category} = req.body;
     const data = {
       title,
-      description,
-      image,
+      image: `http://localhost:3700/uploads/${req.file.filename}`,
+      price,
       status,
       id_category,
       created_at: new Date()

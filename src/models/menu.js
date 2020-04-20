@@ -40,7 +40,7 @@ module.exports = {
         })
     },
     getPage: (page, total)=> {
-        const dataPage = 5;
+        const dataPage = 3;
         const totalPage = total / dataPage;
         const firstData = dataPage * page - dataPage;
         return new Promise((resolve,reject)=> {

@@ -92,7 +92,7 @@ module.exports = {
         console.log(data.email)
         userModel.login(data.email)
             .then((result) => {
-                const token = jwt.sign({id: result[0].id, email: result[0].email}, 'library');
+                const token = jwt.sign({id: result[0].id, email: result[0].email}, 'menu');
                 const checkPass = compareSync(data.password, result[0].password)
                 console.log(checkPass)
                 if (checkPass) {
